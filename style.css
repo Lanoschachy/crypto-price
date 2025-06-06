@@ -1,0 +1,139 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #181818; /* Lebih gelap */
+    color: #e0e0e0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Lebar container utama */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+h1 {
+    color: #52d824;
+    margin-bottom: 20px;
+}
+
+.currency-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.currency-btn {
+    background-color: #212121;
+    color: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.currency-btn.active {
+    background-color: #52d824;
+    color: #181818;
+}
+
+.currency-btn:hover {
+    background-color: #66ff33;
+    color: #181818;
+}
+
+.currency-toggle p {
+    margin-left: 15px;
+    color: #9e9e9e;
+}
+
+#current-currency {
+    color: #52d824;
+    font-weight: bold;
+}
+
+.crypto-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.crypto-card {
+    background-color: #212121;
+    color: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    width: calc(33% - 14px); /* Untuk tiga card sejajar */
+    box-sizing: border-box;
+    text-align: left;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #52d824;
+}
+
+.crypto-card p {
+    margin: 5px 0;
+}
+
+#emas-price, #xrp-price, #usdidr-rate {
+    font-weight: bold;
+    color: #aeea00; /* Warna hijau yang lebih cerah */
+}
+
+#main-btc-price{
+    font-weight: bold;
+    color: #aeea00; /* Warna hijau yang lebih cerah */
+    font-size: 500%;
+    
+}
+
+.error-indicator {
+    color: #ff6e40; /* Warna oranye/merah untuk error */
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 900px) {
+    .crypto-card {
+        width: calc(50% - 10px); /* Dua card per baris */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .crypto-grid {
+        flex-direction: column;
+    }
+    .crypto-card {
+        width: 100%;
+    }
+    .currency-toggle {
+        align-items: center;
+    }
+    .currency-toggle button {
+        margin: 5px 0;
+    }
+    .currency-toggle p {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    
+    #main-btc-price{
+        
+        font-size: 200%;
+    }
+}
